@@ -47,7 +47,7 @@ Or install it yourself as:
 ### CRUD operations
 
     # Creating an upsert job, using XML type (default)
-    job = Restforce::Bulk::Job.create(:upsert, 'Account')
+    job = Restforce::Bulk::Job.create(:upsert, 'Account', 'ExternalId__c')
 
     # Adding a batch
     batch = job.add_batch([{ Id: nil, Name: "New Account" }, { Id: 'a0B29000000XGxf', Name: 'Old Account' }])
